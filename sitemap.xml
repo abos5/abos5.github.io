@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yii2cms.com/2017/04/19/about/</loc>
+    
+    <lastmod>2017-04-19T09:52:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yii2cms.com/2017/04/19/foo/</loc>
+    
+    <lastmod>2017-04-19T09:45:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yii2cms.com/about/index.html</loc>
     
     <lastmod>2017-03-29T12:24:42.000Z</lastmod>

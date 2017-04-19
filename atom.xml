@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yii2cms.com/"/>
-  <updated>2017-03-29T10:22:59.000Z</updated>
+  <updated>2017-04-19T09:52:38.000Z</updated>
   <id>http://yii2cms.com/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>foo</title>
+    <link href="http://yii2cms.com/2017/04/19/about/"/>
+    <id>http://yii2cms.com/2017/04/19/about/</id>
+    <published>2017-04-19T09:45:32.000Z</published>
+    <updated>2017-04-19T09:52:38.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>foo</title>
+    <link href="http://yii2cms.com/2017/04/19/foo/"/>
+    <id>http://yii2cms.com/2017/04/19/foo/</id>
+    <published>2017-04-19T09:45:32.000Z</published>
+    <updated>2017-04-19T09:45:32.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
