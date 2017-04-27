@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yii2cms.com/"/>
-  <updated>2017-04-23T14:49:43.000Z</updated>
+  <updated>2017-04-26T15:49:43.000Z</updated>
   <id>http://yii2cms.com/</id>
   
   <author>
@@ -16,15 +16,50 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>understanding nodejs generator</title>
-    <link href="http://yii2cms.com/2017/04/23/skills/nodejs/understanding-nodejs-generator/"/>
-    <id>http://yii2cms.com/2017/04/23/skills/nodejs/understanding-nodejs-generator/</id>
+    <title>understanding nodejs co</title>
+    <link href="http://yii2cms.com/2017/04/23/skills/nodejs/understanding-nodejs-co/"/>
+    <id>http://yii2cms.com/2017/04/23/skills/nodejs/understanding-nodejs-co/</id>
     <published>2017-04-23T14:42:42.000Z</published>
-    <updated>2017-04-23T14:49:43.000Z</updated>
+    <updated>2017-04-26T15:49:43.000Z</updated>
     
     <content type="html"><![CDATA[<p><a href="(http://www.blackganglion.com/2016/08/01/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3generator%E4%B8%8Eco%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/)" title="参考来源">参考来源</a></p>
-<h3 id="thunkify-delay-execution-of-a-function"><a href="#thunkify-delay-execution-of-a-function" class="headerlink" title="thunkify (delay execution of a function)"></a>thunkify (delay execution of a function)</h3><pre><code>需要强化的意识， generator 的执行是被切割的， 每一层之间是被阻塞、中断掉的。
-</code></pre><h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">readFile</span>(<span class="params">fileName</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</div><div class="line">    fs.readFile(fileName, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</div><div class="line">      callback(err, data.toString());</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> gen = <span class="function"><span class="keyword">function</span>*(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'next 1'</span>)</div><div class="line">  <span class="keyword">var</span> res1 = <span class="keyword">yield</span> readFile(path.join(__dirname, <span class="string">'1.txt'</span>));</div><div class="line">  <span class="built_in">console</span>.log(res1);  <span class="comment">// 1.txt中的内容</span></div><div class="line">  <span class="keyword">var</span> res2 = <span class="keyword">yield</span> readFile(path.join(__dirname, <span class="string">'2.txt'</span>));</div><div class="line">  <span class="built_in">console</span>.log(res2);  <span class="comment">// 2.txt中的内容</span></div><div class="line">  <span class="keyword">return</span> <span class="string">'test3'</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> g = gen();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'initialized'</span>)</div><div class="line"></div><div class="line">g.next().value(<span class="function"><span class="keyword">function</span>(<span class="params">err, res</span>) </span>&#123;</div><div class="line">  g.next(res).value(<span class="function"><span class="keyword">function</span>(<span class="params">err, res</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(g.next(res)); <span class="comment">// &#123; value: 'test3', done: true &#125;</span></div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="nodejs-异步"><a href="#nodejs-异步" class="headerlink" title="nodejs 异步"></a>nodejs 异步</h3><ol>
+<li>callback 直接了当，无需理解就明白原理，但 debug 和调试难度大</li>
+<li>generator 用 “同步” 的形式编写异步的代码</li>
+<li>promise + generator 的解决方案</li>
+<li>co 提供了自动 then/next 的功能</li>
+</ol>
+<h3 id="generator"><a href="#generator" class="headerlink" title="generator"></a>generator</h3><ol>
+<li>yield 虽然是迭代器，但在 co 里， 本身已经是同步的逻辑放置到 yield 后没有意义</li>
+<li>yield 后必须跟异步的逻辑、语句</li>
+<li>yield 跟 普通函数、数字、计算 没有意义（同1, 对应了 co 接受的 thunk 必须是接受一个第一个参数为异常、第二个参数为返回值的 callback， 传入其它的函数会导致 co 继续 ）</li>
+</ol>
+<h3 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h3><ol>
+<li>promise 的初始化是立刻执行的</li>
+<li>promise 等待着 resolve/reject 的召唤</li>
+</ol>
+<h3 id="co"><a href="#co" class="headerlink" title="co"></a>co</h3><ol>
+<li>co 的目的是 自动 then/next， 没了</li>
+<li>co 的返回必然是 Promise</li>
+<li>co resolve/reject 的作用是后续的 then 的绑定事件可以继续了</li>
+</ol>
+<h3 id="thunkify-delay-execution-of-a-function"><a href="#thunkify-delay-execution-of-a-function" class="headerlink" title="thunkify (delay execution of a function)"></a>thunkify (delay execution of a function)</h3><p>粗暴地讲， generator thunkified 之后，<br>需要强化的意识， generator 的执行是被切割的， 每一层之间是被阻塞、中断掉的。<br>被分割的逻辑可以被看成3个部分</p>
+<ol>
+<li>generator 里至当前 yield 之前的逻辑</li>
+<li>generator 里当前 yield 后一语句逻辑</li>
+<li>generator 外执行被延迟的实际逻辑</li>
+</ol>
+<p>一个有 n 个 yield 的 generator 正常的执行逻辑:</p>
+<ol>
+<li>初始化                -&gt; 返回函数指针</li>
+<li>第1个 next()          -&gt; 抵达第1个 yield, 并返回 yield 后一语句的值(函数)</li>
+<li><p>第1个 yield 返回的函数  -&gt; 执行实际被延迟的逻辑，</p>
+<p>此时，关键的地方来了， 第2个 next() 由谁触发?<br>答案： <em>必须</em>是在实际被延迟的逻辑执行完毕时触发， 触发方式是回调, 协议是第1个参数为错误信息，第2个参数为第2个 next() 的参数， 即是第一个 yield 的左值</p>
+</li>
+<li><p>抵达第2个 yield</p>
+</li>
+</ol>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">readFile</span>(<span class="params">fileName</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</div><div class="line">    fs.readFile(fileName, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</div><div class="line">      callback(err, data.toString());</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> gen = <span class="function"><span class="keyword">function</span>*(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'next 1'</span>)</div><div class="line">  <span class="keyword">var</span> res1 = <span class="keyword">yield</span> readFile(path.join(__dirname, <span class="string">'1.txt'</span>));</div><div class="line">  <span class="built_in">console</span>.log(res1);  <span class="comment">// 1.txt中的内容</span></div><div class="line">  <span class="keyword">var</span> res2 = <span class="keyword">yield</span> readFile(path.join(__dirname, <span class="string">'2.txt'</span>));</div><div class="line">  <span class="built_in">console</span>.log(res2);  <span class="comment">// 2.txt中的内容</span></div><div class="line">  <span class="keyword">return</span> <span class="string">'test3'</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> g = gen();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'initialized'</span>)</div><div class="line"></div><div class="line">g.next().value(<span class="function"><span class="keyword">function</span>(<span class="params">err, res</span>) </span>&#123;</div><div class="line">  g.next(res).value(<span class="function"><span class="keyword">function</span>(<span class="params">err, res</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(g.next(res)); <span class="comment">// &#123; value: 'test3', done: true &#125;</span></div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">

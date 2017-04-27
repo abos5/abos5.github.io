@@ -6,14 +6,45 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yii2cms.com">
-  <title>Tag: python27 | Blog of Abos Freeman</title>
+  <title>understanding nodejs co | Blog of Abos Freeman</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Blog of Abos Freeman">
-<meta property="og:url" content="http://yii2cms.com/tags/python27/index.html">
+  <meta name="description" content="参考来源
+nodejs 异步
+callback 直接了当，无需理解就明白原理，但 debug 和调试难度大
+generator 用 “同步” 的形式编写异步的代码
+promise + generator 的解决方案
+co 提供了自动 then/next 的功能
+
+generator
+yield 虽然是迭代器，但在 co 里， 本身已经是同步的逻辑放置到 yield 后没有意义
+yield 后必须跟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="understanding nodejs co">
+<meta property="og:url" content="http://yii2cms.com/2017/04/23/skills/nodejs/understanding-nodejs-co/index.html">
 <meta property="og:site_name" content="Blog of Abos Freeman">
+<meta property="og:description" content="参考来源
+nodejs 异步
+callback 直接了当，无需理解就明白原理，但 debug 和调试难度大
+generator 用 “同步” 的形式编写异步的代码
+promise + generator 的解决方案
+co 提供了自动 then/next 的功能
+
+generator
+yield 虽然是迭代器，但在 co 里， 本身已经是同步的逻辑放置到 yield 后没有意义
+yield 后必须跟">
+<meta property="og:updated_time" content="2017-04-26T15:49:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog of Abos Freeman">
+<meta name="twitter:title" content="understanding nodejs co">
+<meta name="twitter:description" content="参考来源
+nodejs 异步
+callback 直接了当，无需理解就明白原理，但 debug 和调试难度大
+generator 用 “同步” 的形式编写异步的代码
+promise + generator 的解决方案
+co 提供了自动 then/next 的功能
+
+generator
+yield 虽然是迭代器，但在 co 里， 本身已经是同步的逻辑放置到 yield 后没有意义
+yield 后必须跟">
   
     <link rel="alternative" href="/atom.xml" title="Blog of Abos Freeman" type="application/atom+xml">
   
@@ -137,60 +168,196 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-skills/nodejs/understanding-nodejs-co" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/29/skills/python/syntax/" class="archive-article-date">
-  	<time datetime="2017-03-29T12:24:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/29/skills/python/syntax/">python basic syntax</a>
+    <h1 class="article-title" itemprop="name">
+      understanding nodejs co
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/04/23/skills/nodejs/understanding-nodejs-co/" class="archive-article-date">
+  	<time datetime="2017-04-23T14:42:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="(http://www.blackganglion.com/2016/08/01/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3generator%E4%B8%8Eco%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/)" title="参考来源">参考来源</a></p>
+<h3 id="nodejs-异步"><a href="#nodejs-异步" class="headerlink" title="nodejs 异步"></a>nodejs 异步</h3><ol>
+<li>callback 直接了当，无需理解就明白原理，但 debug 和调试难度大</li>
+<li>generator 用 “同步” 的形式编写异步的代码</li>
+<li>promise + generator 的解决方案</li>
+<li>co 提供了自动 then/next 的功能</li>
+</ol>
+<h3 id="generator"><a href="#generator" class="headerlink" title="generator"></a>generator</h3><ol>
+<li>yield 虽然是迭代器，但在 co 里， 本身已经是同步的逻辑放置到 yield 后没有意义</li>
+<li>yield 后必须跟异步的逻辑、语句</li>
+<li>yield 跟 普通函数、数字、计算 没有意义（同1, 对应了 co 接受的 thunk 必须是接受一个第一个参数为异常、第二个参数为返回值的 callback， 传入其它的函数会导致 co 继续 ）</li>
+</ol>
+<h3 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h3><ol>
+<li>promise 的初始化是立刻执行的</li>
+<li>promise 等待着 resolve/reject 的召唤</li>
+</ol>
+<h3 id="co"><a href="#co" class="headerlink" title="co"></a>co</h3><ol>
+<li>co 的目的是 自动 then/next， 没了</li>
+<li>co 的返回必然是 Promise</li>
+<li>co resolve/reject 的作用是后续的 then 的绑定事件可以继续了</li>
+</ol>
+<h3 id="thunkify-delay-execution-of-a-function"><a href="#thunkify-delay-execution-of-a-function" class="headerlink" title="thunkify (delay execution of a function)"></a>thunkify (delay execution of a function)</h3><p>粗暴地讲， generator thunkified 之后，<br>需要强化的意识， generator 的执行是被切割的， 每一层之间是被阻塞、中断掉的。<br>被分割的逻辑可以被看成3个部分</p>
+<ol>
+<li>generator 里至当前 yield 之前的逻辑</li>
+<li>generator 里当前 yield 后一语句逻辑</li>
+<li>generator 外执行被延迟的实际逻辑</li>
+</ol>
+<p>一个有 n 个 yield 的 generator 正常的执行逻辑:</p>
+<ol>
+<li>初始化                -&gt; 返回函数指针</li>
+<li>第1个 next()          -&gt; 抵达第1个 yield, 并返回 yield 后一语句的值(函数)</li>
+<li><p>第1个 yield 返回的函数  -&gt; 执行实际被延迟的逻辑，</p>
+<p>此时，关键的地方来了， 第2个 next() 由谁触发?<br>答案： <em>必须</em>是在实际被延迟的逻辑执行完毕时触发， 触发方式是回调, 协议是第1个参数为错误信息，第2个参数为第2个 next() 的参数， 即是第一个 yield 的左值</p>
+</li>
+<li><p>抵达第2个 yield</p>
+</li>
+</ol>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">readFile</span>(<span class="params">fileName</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</div><div class="line">    fs.readFile(fileName, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</div><div class="line">      callback(err, data.toString());</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> gen = <span class="function"><span class="keyword">function</span>*(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'next 1'</span>)</div><div class="line">  <span class="keyword">var</span> res1 = <span class="keyword">yield</span> readFile(path.join(__dirname, <span class="string">'1.txt'</span>));</div><div class="line">  <span class="built_in">console</span>.log(res1);  <span class="comment">// 1.txt中的内容</span></div><div class="line">  <span class="keyword">var</span> res2 = <span class="keyword">yield</span> readFile(path.join(__dirname, <span class="string">'2.txt'</span>));</div><div class="line">  <span class="built_in">console</span>.log(res2);  <span class="comment">// 2.txt中的内容</span></div><div class="line">  <span class="keyword">return</span> <span class="string">'test3'</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> g = gen();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'initialized'</span>)</div><div class="line"></div><div class="line">g.next().value(<span class="function"><span class="keyword">function</span>(<span class="params">err, res</span>) </span>&#123;</div><div class="line">  g.next(res).value(<span class="function"><span class="keyword">function</span>(<span class="params">err, res</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(g.next(res)); <span class="comment">// &#123; value: 'test3', done: true &#125;</span></div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>3q<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://static.abos.space/personnel/ali-money-collect.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://static.abos.space/personnel/wechat-money-collect.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python27</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">nodejs generator eggjs</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yii2cms.com/2017/04/23/skills/nodejs/understanding-nodejs-co/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/03/29/skills/python/syntax/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python basic syntax</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -213,9 +380,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
