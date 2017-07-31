@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yii2cms.com/"/>
-  <updated>2017-07-31T15:46:32.000Z</updated>
+  <updated>2017-07-31T16:28:42.000Z</updated>
   <id>http://yii2cms.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿里云服务器 oss 的使用</title>
+    <link href="http://yii2cms.com/2017/07/30/skills/aliyun/oss/"/>
+    <id>http://yii2cms.com/2017/07/30/skills/aliyun/oss/</id>
+    <published>2017-07-30T15:52:42.000Z</published>
+    <updated>2017-07-31T16:28:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>创建一个简单的bucket用来放公网访问的图片资源异常方便<br>不过还是建议用自有域名cname过去比较好， 方便以后迁移</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;创建一个简单的bucket用来放公网访问的图片资源异常方便&lt;br&gt;不过还是建议用自有域名cname过去比较好， 方便以后迁移&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="aliyun oss" scheme="http://yii2cms.com/tags/aliyun-oss/"/>
+    
+  </entry>
   
   <entry>
     <title>redis-cluster-debug-log about</title>
