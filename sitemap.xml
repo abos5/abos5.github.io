@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yii2cms.com/2017/07/30/skills/redis/redis-cluster-debug-log-of-crash/</loc>
+    
+    <lastmod>2017-07-31T15:46:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yii2cms.com/2017/05/28/picking-up-scrapy-to-crawl-netease-music/</loc>
+    
+    <lastmod>2017-05-28T15:48:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yii2cms.com/2017/04/23/skills/nodejs/understanding-nodejs-co/</loc>
     
     <lastmod>2017-04-26T15:49:43.000Z</lastmod>
