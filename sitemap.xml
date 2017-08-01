@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yii2cms.com/2017/08/01/skills/distribute/multiple-server-unit-solution/</loc>
+    
+    <lastmod>2017-08-01T12:53:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yii2cms.com/2017/07/30/skills/redis/redis-cluster-debug-log-of-crash/</loc>
     
     <lastmod>2017-08-01T12:28:37.000Z</lastmod>
