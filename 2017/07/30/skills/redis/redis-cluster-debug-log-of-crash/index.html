@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Blog of Abos Freeman">
 <meta property="og:description" content="背景(background) 公司： xxx 业务: 评论 问题: 备注: 刚到公司一个多月的我，在没有任何人指导、讲解任何业务的情况下努力争取熟悉业务、努力融入到业务同事的社交环境去。  问题详情怎样讲好一个故事。 redis 集群节点释放内存也是很坑 问题总结 Redis 机器不要与业务机器放到一起， 否则CPU之间会互相影响 Redis 集群的内存配置要规划好，同一机器上的 redis集群内">
 <meta property="og:locale" content="ZH_cn">
-<meta property="og:updated_time" content="2017-08-01T12:28:37.000Z">
+<meta property="og:updated_time" content="2017-08-02T15:43:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redis-cluster-debug-log about">
 <meta name="twitter:description" content="背景(background) 公司： xxx 业务: 评论 问题: 备注: 刚到公司一个多月的我，在没有任何人指导、讲解任何业务的情况下努力争取熟悉业务、努力融入到业务同事的社交环境去。  问题详情怎样讲好一个故事。 redis 集群节点释放内存也是很坑 问题总结 Redis 机器不要与业务机器放到一起， 否则CPU之间会互相影响 Redis 集群的内存配置要规划好，同一机器上的 redis集群内">
@@ -180,6 +180,7 @@
 <li>主从节点不能防在同一台。</li>
 <li>当某节点出现qps、cpu表现比其他更高、有异常的时候则可以考虑用strace对那个server进行监控，看看是哪些命令常驻， 大部分时候是一些没有分布式特性的key(strace -p 54235 -e read -s 1024 -o 54235.strace.log 这个命令拯救世界)</li>
 <li>当一个url请求里，redis请求可能获取不到数据、且事务性要求不高时，可以在超时、异常时直接断开，返回500， 让其他请求可以顺利进行。(或者不一定每个redis命令失败时都断开， 只需要断开入口处常用的)</li>
+<li>表状态的redis key如果做了过期，会影响代码上判断的分歧， 比如null和0</li>
 </ol>
 
       
@@ -414,6 +415,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">career distributed system</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">distributed-server-side-system</a>
               </li>
              
@@ -422,11 +427,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">nodejs generator eggjs</a>
+                <a href="javascript:void(0)" class="js-tag color4">python27</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">python27</a>
+                <a href="javascript:void(0)" class="js-tag color3">nodejs eggjs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">nodejs generator eggjs</a>
               </li>
              
               <li class="article-tag-list-item">

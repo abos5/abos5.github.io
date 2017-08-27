@@ -2,16 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yii2cms.com/2017/08/01/skills/distribute/mysql-optimize/</loc>
+    
+    <lastmod>2017-08-25T10:29:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yii2cms.com/2017/08/13/skills/nodejs/eggjs-tutorial/</loc>
+    
+    <lastmod>2017-08-13T16:04:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yii2cms.com/2017/08/13/skills/most-difficult-scenario-in-my-career/</loc>
+    
+    <lastmod>2017-08-13T09:47:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yii2cms.com/about/index.html</loc>
+    
+    <lastmod>2017-08-07T15:38:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yii2cms.com/2017/08/07/skills/distribute/from-one-mysql-to-distributed-dbs/</loc>
+    
+    <lastmod>2017-08-07T15:32:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yii2cms.com/2017/08/01/skills/distribute/multiple-server-unit-solution/</loc>
     
-    <lastmod>2017-08-01T12:53:18.000Z</lastmod>
+    <lastmod>2017-08-06T15:20:35.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yii2cms.com/2017/07/30/skills/redis/redis-cluster-debug-log-of-crash/</loc>
     
-    <lastmod>2017-08-01T12:28:37.000Z</lastmod>
+    <lastmod>2017-08-02T15:43:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yii2cms.com/2017/08/01/skills/distribute/load-balance/</loc>
+    
+    <lastmod>2017-08-01T13:21:22.000Z</lastmod>
     
   </url>
   
@@ -40,13 +82,6 @@
     <loc>http://yii2cms.com/2017/03/29/skills/python/syntax/</loc>
     
     <lastmod>2017-04-19T16:40:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yii2cms.com/about/index.html</loc>
-    
-    <lastmod>2017-03-29T12:24:42.000Z</lastmod>
     
   </url>
   
