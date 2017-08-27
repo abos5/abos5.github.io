@@ -75,9 +75,21 @@
     <link href="http://yii2cms.com/2017/08/07/skills/distribute/from-one-mysql-to-distributed-dbs/"/>
     <id>http://yii2cms.com/2017/08/07/skills/distribute/from-one-mysql-to-distributed-dbs/</id>
     <published>2017-08-07T03:12:29.000Z</published>
-    <updated>2017-08-07T15:32:56.000Z</updated>
+    <updated>2017-08-27T15:56:06.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="一开始的评论服务很简单，-只是部分小业务在用"><a href="#一开始的评论服务很简单，-只是部分小业务在用" class="headerlink" title="一开始的评论服务很简单， 只是部分小业务在用"></a>一开始的评论服务很简单， 只是部分小业务在用</h1><h1 id="后来专辑也需要加评论"><a href="#后来专辑也需要加评论" class="headerlink" title="后来专辑也需要加评论"></a>后来专辑也需要加评论</h1><h1 id="后来歌单也需要加评论"><a href="#后来歌单也需要加评论" class="headerlink" title="后来歌单也需要加评论"></a>后来歌单也需要加评论</h1><h1 id="后来歌曲也需要加评论"><a href="#后来歌曲也需要加评论" class="headerlink" title="后来歌曲也需要加评论"></a>后来歌曲也需要加评论</h1><h1 id="点赞数数据"><a href="#点赞数数据" class="headerlink" title="点赞数数据"></a>点赞数数据</h1><h1 id="点赞列表数据"><a href="#点赞列表数据" class="headerlink" title="点赞列表数据"></a>点赞列表数据</h1><h1 id="redis-内存膨胀"><a href="#redis-内存膨胀" class="headerlink" title="redis 内存膨胀"></a>redis 内存膨胀</h1><h1 id="redis-内存数据丢失"><a href="#redis-内存数据丢失" class="headerlink" title="redis 内存数据丢失"></a>redis 内存数据丢失</h1><h1 id="好在容错率高-评论服务数据出错很难有用户会发现，而且也不会造成太大损失"><a href="#好在容错率高-评论服务数据出错很难有用户会发现，而且也不会造成太大损失" class="headerlink" title="好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失)"></a>好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失)</h1><h1 id="小业务的评论积累起来数据也变得非常多了"><a href="#小业务的评论积累起来数据也变得非常多了" class="headerlink" title="小业务的评论积累起来数据也变得非常多了"></a>小业务的评论积累起来数据也变得非常多了</h1><h1 id="对接一个新的业务有多难"><a href="#对接一个新的业务有多难" class="headerlink" title="对接一个新的业务有多难"></a>对接一个新的业务有多难</h1><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+    <content type="html"><![CDATA[<h1 id="一开始的评论服务很简单，-只是部分小业务在用"><a href="#一开始的评论服务很简单，-只是部分小业务在用" class="headerlink" title="一开始的评论服务很简单， 只是部分小业务在用"></a>一开始的评论服务很简单， 只是部分小业务在用</h1><ol>
+<li>后来专辑也需要加评论</li>
+<li>后来歌单也需要加评论</li>
+<li>后来歌曲也需要加评论</li>
+<li>点赞数数据</li>
+<li>点赞列表数据</li>
+<li>redis 内存膨胀</li>
+<li>redis 内存数据丢失</li>
+<li>好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失)</li>
+<li>小业务的评论积累起来数据也变得非常多了</li>
+<li>对接一个新的业务有多难</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
 <li>分布式服务最大的难点应该是配置与管理。 如何管理各个服务器、如何更新、使用对应的配置。</li>
 <li>实例通过传参会比较好</li>
 </ol>
@@ -160,28 +172,6 @@
   </entry>
   
   <entry>
-    <title>阿里云服务器 oss 的使用</title>
-    <link href="http://yii2cms.com/2017/07/30/skills/aliyun/oss/"/>
-    <id>http://yii2cms.com/2017/07/30/skills/aliyun/oss/</id>
-    <published>2017-07-30T15:52:42.000Z</published>
-    <updated>2017-07-31T16:28:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>创建一个简单的bucket用来放公网访问的图片资源异常方便<br>不过还是建议用自有域名cname过去比较好， 方便以后迁移</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;创建一个简单的bucket用来放公网访问的图片资源异常方便&lt;br&gt;不过还是建议用自有域名cname过去比较好， 方便以后迁移&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-      <category term="aliyun oss" scheme="http://yii2cms.com/tags/aliyun-oss/"/>
-    
-  </entry>
-  
-  <entry>
     <title>redis-cluster-debug-log about</title>
     <link href="http://yii2cms.com/2017/07/30/skills/redis/redis-cluster-debug-log-of-crash/"/>
     <id>http://yii2cms.com/2017/07/30/skills/redis/redis-cluster-debug-log-of-crash/</id>
@@ -219,6 +209,28 @@
     
     
       <category term="redis cluster C10K" scheme="http://yii2cms.com/tags/redis-cluster-C10K/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阿里云服务器 oss 的使用</title>
+    <link href="http://yii2cms.com/2017/07/30/skills/aliyun/oss/"/>
+    <id>http://yii2cms.com/2017/07/30/skills/aliyun/oss/</id>
+    <published>2017-07-30T15:52:42.000Z</published>
+    <updated>2017-07-31T16:28:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>创建一个简单的bucket用来放公网访问的图片资源异常方便<br>不过还是建议用自有域名cname过去比较好， 方便以后迁移</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;创建一个简单的bucket用来放公网访问的图片资源异常方便&lt;br&gt;不过还是建议用自有域名cname过去比较好， 方便以后迁移&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="aliyun oss" scheme="http://yii2cms.com/tags/aliyun-oss/"/>
     
   </entry>
   

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yii2cms.com/2017/08/07/skills/distribute/from-one-mysql-to-distributed-dbs/</loc>
+    
+    <lastmod>2017-08-27T15:56:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yii2cms.com/2017/08/01/skills/distribute/mysql-optimize/</loc>
     
     <lastmod>2017-08-25T10:29:02.000Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://yii2cms.com/about/index.html</loc>
     
     <lastmod>2017-08-07T15:38:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yii2cms.com/2017/08/07/skills/distribute/from-one-mysql-to-distributed-dbs/</loc>
-    
-    <lastmod>2017-08-07T15:32:56.000Z</lastmod>
     
   </url>
   

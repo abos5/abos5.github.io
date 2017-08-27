@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yii2cms.com">
   <title>from one mysql to distibuted mysql (从单个mysql实例单个表到分表到分库分表) | Blog of Abos Freeman</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一开始的评论服务很简单， 只是部分小业务在用后来专辑也需要加评论后来歌单也需要加评论后来歌曲也需要加评论点赞数数据点赞列表数据redis 内存膨胀redis 内存数据丢失好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失)小业务的评论积累起来数据也变得非常多了对接一个新的业务有多难总结 分布式服务最大的难点应该是配置与管理。 如何管理各个服务器、如何更新、使用对应的配置。 实例">
+  <meta name="description" content="一开始的评论服务很简单， 只是部分小业务在用 后来专辑也需要加评论 后来歌单也需要加评论 后来歌曲也需要加评论 点赞数数据 点赞列表数据 redis 内存膨胀 redis 内存数据丢失 好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失) 小业务的评论积累起来数据也变得非常多了 对接一个新的业务有多难  总结 分布式服务最大的难点应该是配置与管理。 如何管理各个服务器、如何更新">
 <meta name="keywords" content="distributed-server-side-system">
 <meta property="og:type" content="article">
 <meta property="og:title" content="from one mysql to distibuted mysql (从单个mysql实例单个表到分表到分库分表)">
 <meta property="og:url" content="http://yii2cms.com/2017/08/07/skills/distribute/from-one-mysql-to-distributed-dbs/index.html">
 <meta property="og:site_name" content="Blog of Abos Freeman">
-<meta property="og:description" content="一开始的评论服务很简单， 只是部分小业务在用后来专辑也需要加评论后来歌单也需要加评论后来歌曲也需要加评论点赞数数据点赞列表数据redis 内存膨胀redis 内存数据丢失好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失)小业务的评论积累起来数据也变得非常多了对接一个新的业务有多难总结 分布式服务最大的难点应该是配置与管理。 如何管理各个服务器、如何更新、使用对应的配置。 实例">
+<meta property="og:description" content="一开始的评论服务很简单， 只是部分小业务在用 后来专辑也需要加评论 后来歌单也需要加评论 后来歌曲也需要加评论 点赞数数据 点赞列表数据 redis 内存膨胀 redis 内存数据丢失 好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失) 小业务的评论积累起来数据也变得非常多了 对接一个新的业务有多难  总结 分布式服务最大的难点应该是配置与管理。 如何管理各个服务器、如何更新">
 <meta property="og:locale" content="ZH_cn">
-<meta property="og:updated_time" content="2017-08-07T15:32:56.000Z">
+<meta property="og:updated_time" content="2017-08-27T15:56:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="from one mysql to distibuted mysql (从单个mysql实例单个表到分表到分库分表)">
-<meta name="twitter:description" content="一开始的评论服务很简单， 只是部分小业务在用后来专辑也需要加评论后来歌单也需要加评论后来歌曲也需要加评论点赞数数据点赞列表数据redis 内存膨胀redis 内存数据丢失好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失)小业务的评论积累起来数据也变得非常多了对接一个新的业务有多难总结 分布式服务最大的难点应该是配置与管理。 如何管理各个服务器、如何更新、使用对应的配置。 实例">
+<meta name="twitter:description" content="一开始的评论服务很简单， 只是部分小业务在用 后来专辑也需要加评论 后来歌单也需要加评论 后来歌曲也需要加评论 点赞数数据 点赞列表数据 redis 内存膨胀 redis 内存数据丢失 好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失) 小业务的评论积累起来数据也变得非常多了 对接一个新的业务有多难  总结 分布式服务最大的难点应该是配置与管理。 如何管理各个服务器、如何更新">
   
     <link rel="alternative" href="/atom.xml" title="Blog of Abos Freeman" type="application/atom+xml">
   
@@ -163,7 +163,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="一开始的评论服务很简单，-只是部分小业务在用"><a href="#一开始的评论服务很简单，-只是部分小业务在用" class="headerlink" title="一开始的评论服务很简单， 只是部分小业务在用"></a>一开始的评论服务很简单， 只是部分小业务在用</h1><h1 id="后来专辑也需要加评论"><a href="#后来专辑也需要加评论" class="headerlink" title="后来专辑也需要加评论"></a>后来专辑也需要加评论</h1><h1 id="后来歌单也需要加评论"><a href="#后来歌单也需要加评论" class="headerlink" title="后来歌单也需要加评论"></a>后来歌单也需要加评论</h1><h1 id="后来歌曲也需要加评论"><a href="#后来歌曲也需要加评论" class="headerlink" title="后来歌曲也需要加评论"></a>后来歌曲也需要加评论</h1><h1 id="点赞数数据"><a href="#点赞数数据" class="headerlink" title="点赞数数据"></a>点赞数数据</h1><h1 id="点赞列表数据"><a href="#点赞列表数据" class="headerlink" title="点赞列表数据"></a>点赞列表数据</h1><h1 id="redis-内存膨胀"><a href="#redis-内存膨胀" class="headerlink" title="redis 内存膨胀"></a>redis 内存膨胀</h1><h1 id="redis-内存数据丢失"><a href="#redis-内存数据丢失" class="headerlink" title="redis 内存数据丢失"></a>redis 内存数据丢失</h1><h1 id="好在容错率高-评论服务数据出错很难有用户会发现，而且也不会造成太大损失"><a href="#好在容错率高-评论服务数据出错很难有用户会发现，而且也不会造成太大损失" class="headerlink" title="好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失)"></a>好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失)</h1><h1 id="小业务的评论积累起来数据也变得非常多了"><a href="#小业务的评论积累起来数据也变得非常多了" class="headerlink" title="小业务的评论积累起来数据也变得非常多了"></a>小业务的评论积累起来数据也变得非常多了</h1><h1 id="对接一个新的业务有多难"><a href="#对接一个新的业务有多难" class="headerlink" title="对接一个新的业务有多难"></a>对接一个新的业务有多难</h1><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+        <h1 id="一开始的评论服务很简单，-只是部分小业务在用"><a href="#一开始的评论服务很简单，-只是部分小业务在用" class="headerlink" title="一开始的评论服务很简单， 只是部分小业务在用"></a>一开始的评论服务很简单， 只是部分小业务在用</h1><ol>
+<li>后来专辑也需要加评论</li>
+<li>后来歌单也需要加评论</li>
+<li>后来歌曲也需要加评论</li>
+<li>点赞数数据</li>
+<li>点赞列表数据</li>
+<li>redis 内存膨胀</li>
+<li>redis 内存数据丢失</li>
+<li>好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失)</li>
+<li>小业务的评论积累起来数据也变得非常多了</li>
+<li>对接一个新的业务有多难</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
 <li>分布式服务最大的难点应该是配置与管理。 如何管理各个服务器、如何更新、使用对应的配置。</li>
 <li>实例通过传参会比较好</li>
 </ol>
@@ -404,15 +416,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">distributed-server-side-system</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">aliyun oss</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">python27</a>
+                <a href="javascript:void(0)" class="js-tag color1">distributed-server-side-system</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -421,6 +429,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">nodejs generator eggjs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">python27</a>
               </li>
              
               <li class="article-tag-list-item">
