@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yii2cms.com/2017/08/13/skills/most-difficult-scenario-in-my-career/</loc>
+    
+    <lastmod>2017-08-28T01:16:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yii2cms.com/2017/08/07/skills/distribute/from-one-mysql-to-distributed-dbs/</loc>
     
     <lastmod>2017-08-27T15:56:06.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://yii2cms.com/2017/08/13/skills/nodejs/eggjs-tutorial/</loc>
     
     <lastmod>2017-08-13T16:04:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yii2cms.com/2017/08/13/skills/most-difficult-scenario-in-my-career/</loc>
-    
-    <lastmod>2017-08-13T09:47:08.000Z</lastmod>
     
   </url>
   
