@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yii2cms.com/2017/07/30/skills/redis/redis-memory-analyze/</loc>
+    
+    <lastmod>2017-11-02T05:09:21.843Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yii2cms.com/2017/08/13/skills/nodejs/eggjs-tutorial/</loc>
+    
+    <lastmod>2017-10-31T03:33:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yii2cms.com/2017/08/13/skills/docker/readme/</loc>
+    
+    <lastmod>2017-10-30T15:15:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yii2cms.com/2017/08/07/skills/distribute/from-one-mysql-to-distributed-dbs/</loc>
+    
+    <lastmod>2017-09-18T03:42:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yii2cms.com/2017/09/18/skills/knowledges/</loc>
     
     <lastmod>2017-09-18T01:19:16.000Z</lastmod>
@@ -16,23 +44,9 @@
   </url>
   
   <url>
-    <loc>http://yii2cms.com/2017/08/07/skills/distribute/from-one-mysql-to-distributed-dbs/</loc>
-    
-    <lastmod>2017-08-27T15:56:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yii2cms.com/2017/08/01/skills/distribute/mysql-optimize/</loc>
     
     <lastmod>2017-08-25T10:29:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yii2cms.com/2017/08/13/skills/nodejs/eggjs-tutorial/</loc>
-    
-    <lastmod>2017-08-13T16:04:46.000Z</lastmod>
     
   </url>
   

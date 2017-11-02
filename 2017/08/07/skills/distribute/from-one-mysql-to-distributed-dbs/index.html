@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yii2cms.com">
   <title>from one mysql to distibuted mysql (从单个mysql实例单个表到分表到分库分表) | Blog of Abos Freeman</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一开始的评论服务很简单， 只是部分小业务在用 后来专辑也需要加评论 后来歌单也需要加评论 后来歌曲也需要加评论 点赞数数据 点赞列表数据 redis 内存膨胀 redis 内存数据丢失 好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失) 小业务的评论积累起来数据也变得非常多了 对接一个新的业务有多难  总结 分布式服务最大的难点应该是配置与管理。 如何管理各个服务器、如何更新">
+  <meta name="description" content="一开始的评论服务很简单， 只是部分小业务在用 后来专辑也需要加评论 后来歌单也需要加评论 后来歌曲也需要加评论 点赞数数据 点赞列表数据 redis 内存膨胀 =&amp;gt; redis 不适合用来做大数据的落地服务， 特别是带有明显冷热区分的数据 redis 内存数据丢失 好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失) 小业务的评论积累起来数据也变得非常多了 对接一个新的业">
 <meta name="keywords" content="distributed-server-side-system">
 <meta property="og:type" content="article">
 <meta property="og:title" content="from one mysql to distibuted mysql (从单个mysql实例单个表到分表到分库分表)">
 <meta property="og:url" content="http://yii2cms.com/2017/08/07/skills/distribute/from-one-mysql-to-distributed-dbs/index.html">
 <meta property="og:site_name" content="Blog of Abos Freeman">
-<meta property="og:description" content="一开始的评论服务很简单， 只是部分小业务在用 后来专辑也需要加评论 后来歌单也需要加评论 后来歌曲也需要加评论 点赞数数据 点赞列表数据 redis 内存膨胀 redis 内存数据丢失 好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失) 小业务的评论积累起来数据也变得非常多了 对接一个新的业务有多难  总结 分布式服务最大的难点应该是配置与管理。 如何管理各个服务器、如何更新">
+<meta property="og:description" content="一开始的评论服务很简单， 只是部分小业务在用 后来专辑也需要加评论 后来歌单也需要加评论 后来歌曲也需要加评论 点赞数数据 点赞列表数据 redis 内存膨胀 =&amp;gt; redis 不适合用来做大数据的落地服务， 特别是带有明显冷热区分的数据 redis 内存数据丢失 好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失) 小业务的评论积累起来数据也变得非常多了 对接一个新的业">
 <meta property="og:locale" content="ZH_cn">
-<meta property="og:updated_time" content="2017-08-27T15:56:06.000Z">
+<meta property="og:updated_time" content="2017-09-18T03:42:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="from one mysql to distibuted mysql (从单个mysql实例单个表到分表到分库分表)">
-<meta name="twitter:description" content="一开始的评论服务很简单， 只是部分小业务在用 后来专辑也需要加评论 后来歌单也需要加评论 后来歌曲也需要加评论 点赞数数据 点赞列表数据 redis 内存膨胀 redis 内存数据丢失 好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失) 小业务的评论积累起来数据也变得非常多了 对接一个新的业务有多难  总结 分布式服务最大的难点应该是配置与管理。 如何管理各个服务器、如何更新">
+<meta name="twitter:description" content="一开始的评论服务很简单， 只是部分小业务在用 后来专辑也需要加评论 后来歌单也需要加评论 后来歌曲也需要加评论 点赞数数据 点赞列表数据 redis 内存膨胀 =&amp;gt; redis 不适合用来做大数据的落地服务， 特别是带有明显冷热区分的数据 redis 内存数据丢失 好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失) 小业务的评论积累起来数据也变得非常多了 对接一个新的业">
   
     <link rel="alternative" href="/atom.xml" title="Blog of Abos Freeman" type="application/atom+xml">
   
@@ -169,7 +169,7 @@
 <li>后来歌曲也需要加评论</li>
 <li>点赞数数据</li>
 <li>点赞列表数据</li>
-<li>redis 内存膨胀</li>
+<li>redis 内存膨胀 =&gt; redis 不适合用来做大数据的落地服务， 特别是带有明显冷热区分的数据</li>
 <li>redis 内存数据丢失</li>
 <li>好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失)</li>
 <li>小业务的评论积累起来数据也变得非常多了</li>
@@ -293,11 +293,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/13/skills/nodejs/eggjs-tutorial/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/08/13/skills/docker/readme/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          eggjs tutorial
+          docker readme (入门大全)
         
       </div>
     </a>
@@ -429,6 +429,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">nodejs generator eggjs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">redis cluster</a>
               </li>
              
               <li class="article-tag-list-item">

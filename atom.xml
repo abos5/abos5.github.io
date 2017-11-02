@@ -66,7 +66,7 @@
     <link href="http://yii2cms.com/2017/08/13/skills/nodejs/eggjs-tutorial/"/>
     <id>http://yii2cms.com/2017/08/13/skills/nodejs/eggjs-tutorial/</id>
     <published>2017-08-13T09:25:42.000Z</published>
-    <updated>2017-08-13T16:04:46.000Z</updated>
+    <updated>2017-10-31T03:33:11.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="eggjs-的插件"><a href="#eggjs-的插件" class="headerlink" title="eggjs 的插件"></a>eggjs 的插件</h1><ol>
 <li><p>插件总结起来，其实是加载插件后，执行一段逻辑。<br>至于插件里是做Middleware， 还是注册一个组件， 都是按照需求来的。</p>
@@ -76,6 +76,20 @@
 <li><p>middleware 是每个请求都会被调用一次，差点误会了。</p>
 </li>
 </ol>
+<h1 id="完善的架构需要哪些"><a href="#完善的架构需要哪些" class="headerlink" title="完善的架构需要哪些"></a>完善的架构需要哪些</h1><ol>
+<li>rpc 服务注册与发现</li>
+<li>zookeeper 统一配置</li>
+<li>zookeeper 统一配置更新</li>
+<li>jenkins 持续集成</li>
+<li>docker 服务构建</li>
+<li>git server 统一代码服务</li>
+<li>user info 用户信息</li>
+<li>数据查看后台</li>
+<li>代码规范, redis key 使用</li>
+<li>代码规范, errors 信息整合</li>
+<li>user storage<br>12.</li>
+</ol>
+<h1 id="跨机房同步"><a href="#跨机房同步" class="headerlink" title="跨机房同步"></a>跨机房同步</h1><p>1.</p>
 ]]></content>
     
     <summary type="html">
@@ -91,11 +105,32 @@
   </entry>
   
   <entry>
+    <title>docker readme (入门大全)</title>
+    <link href="http://yii2cms.com/2017/08/13/skills/docker/readme/"/>
+    <id>http://yii2cms.com/2017/08/13/skills/docker/readme/</id>
+    <published>2017-08-13T09:25:42.000Z</published>
+    <updated>2017-10-30T15:15:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.gitbook.com/download/epub/book/yeasy/docker_practice" target="_blank" rel="external">入门书籍</a><br><a href="https://cr.console.aliyun.com/#/accelerator" target="_blank" rel="external">阿里云</a><br><a href="https://yq.aliyun.com/articles/110806" target="_blank" rel="external">安装</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.gitbook.com/download/epub/book/yeasy/docker_practice&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;入门书籍&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://cr
+    
+    </summary>
+    
+    
+      <category term="nodejs eggjs" scheme="http://yii2cms.com/tags/nodejs-eggjs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>from one mysql to distibuted mysql (从单个mysql实例单个表到分表到分库分表)</title>
     <link href="http://yii2cms.com/2017/08/07/skills/distribute/from-one-mysql-to-distributed-dbs/"/>
     <id>http://yii2cms.com/2017/08/07/skills/distribute/from-one-mysql-to-distributed-dbs/</id>
     <published>2017-08-07T03:12:29.000Z</published>
-    <updated>2017-08-27T15:56:06.000Z</updated>
+    <updated>2017-09-18T03:42:18.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一开始的评论服务很简单，-只是部分小业务在用"><a href="#一开始的评论服务很简单，-只是部分小业务在用" class="headerlink" title="一开始的评论服务很简单， 只是部分小业务在用"></a>一开始的评论服务很简单， 只是部分小业务在用</h1><ol>
 <li>后来专辑也需要加评论</li>
@@ -103,7 +138,7 @@
 <li>后来歌曲也需要加评论</li>
 <li>点赞数数据</li>
 <li>点赞列表数据</li>
-<li>redis 内存膨胀</li>
+<li>redis 内存膨胀 =&gt; redis 不适合用来做大数据的落地服务， 特别是带有明显冷热区分的数据</li>
 <li>redis 内存数据丢失</li>
 <li>好在容错率高(评论服务数据出错很难有用户会发现，而且也不会造成太大损失)</li>
 <li>小业务的评论积累起来数据也变得非常多了</li>
@@ -148,12 +183,17 @@
   
   <entry>
     <title>multiple-server-unit-solution (异地多单元多主架构方案)</title>
-    <link href="http://yii2cms.com/2017/08/01/skills/distribute/multiple-server-unit-solution/"/>
-    <id>http://yii2cms.com/2017/08/01/skills/distribute/multiple-server-unit-solution/</id>
+    <link href="http://yii2cms.com/2017/08/01/skills/distribute/mysql-optimize/"/>
+    <id>http://yii2cms.com/2017/08/01/skills/distribute/mysql-optimize/</id>
     <published>2017-08-01T12:48:29.000Z</published>
-    <updated>2017-08-06T15:20:35.000Z</updated>
+    <updated>2017-08-25T10:29:02.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="什么是异地多单元多主架构？"><a href="#什么是异地多单元多主架构？" class="headerlink" title="什么是异地多单元多主架构？"></a>什么是异地多单元多主架构？</h1><h1 id="异地机房的容灾方案发展历史"><a href="#异地机房的容灾方案发展历史" class="headerlink" title="异地机房的容灾方案发展历史"></a>异地机房的容灾方案发展历史</h1><h1 id="各种方案的实现与痛点"><a href="#各种方案的实现与痛点" class="headerlink" title="各种方案的实现与痛点"></a>各种方案的实现与痛点</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="什么是异地多单元多主架构？"><a href="#什么是异地多单元多主架构？" class="headerlink" title="什么是异地多单元多主架构？"></a>什么是异地多单元多主架构？</h1><h1 id="异地机房的容灾方案发展历史"><a href="#异地机房的容灾方案发展历史" class="headerlink" title="异地机房的容灾方案发展历史"></a>异地机房的容灾方案发展历史</h1><h1 id="各种方案的实现与痛点"><a href="#各种方案的实现与痛点" class="headerlink" title="各种方案的实现与痛点"></a>各种方案的实现与痛点</h1><h1 id="异地机房数据同步坑"><a href="#异地机房数据同步坑" class="headerlink" title="异地机房数据同步坑"></a>异地机房数据同步坑</h1><ol>
+<li>异地双主双备互相同步， 每条 sql 本身会执行一次</li>
+<li>由于业务需要，通过 dbasync 将某数据通过 mysql client 导入数据库</li>
+<li>因此出现了4个问题<br>3.1 由于 sql dbasync与 mysql 本身数据同步执行的顺序与业务本身的要求不同，可能导致业务数据错误<br>3.2 由于 sql dbasync与 mysql 本身数据同步执行的顺序, 会导致数据与主键不一致。<br>3.3 假如数据中又包含唯一键，则有可能导致两边数据库同步失败<br>3.4 所有的 sql 都会执行2次，导致db性能瓶颈。<br>解决方案:<br>dbasync的 mysql 操作要么单边， 要么完全不能要。</li>
+</ol>
+]]></content>
     
     <summary type="html">
     
@@ -168,17 +208,12 @@
   
   <entry>
     <title>multiple-server-unit-solution (异地多单元多主架构方案)</title>
-    <link href="http://yii2cms.com/2017/08/01/skills/distribute/mysql-optimize/"/>
-    <id>http://yii2cms.com/2017/08/01/skills/distribute/mysql-optimize/</id>
+    <link href="http://yii2cms.com/2017/08/01/skills/distribute/multiple-server-unit-solution/"/>
+    <id>http://yii2cms.com/2017/08/01/skills/distribute/multiple-server-unit-solution/</id>
     <published>2017-08-01T12:48:29.000Z</published>
-    <updated>2017-08-25T10:29:02.000Z</updated>
+    <updated>2017-08-06T15:20:35.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="什么是异地多单元多主架构？"><a href="#什么是异地多单元多主架构？" class="headerlink" title="什么是异地多单元多主架构？"></a>什么是异地多单元多主架构？</h1><h1 id="异地机房的容灾方案发展历史"><a href="#异地机房的容灾方案发展历史" class="headerlink" title="异地机房的容灾方案发展历史"></a>异地机房的容灾方案发展历史</h1><h1 id="各种方案的实现与痛点"><a href="#各种方案的实现与痛点" class="headerlink" title="各种方案的实现与痛点"></a>各种方案的实现与痛点</h1><h1 id="异地机房数据同步坑"><a href="#异地机房数据同步坑" class="headerlink" title="异地机房数据同步坑"></a>异地机房数据同步坑</h1><ol>
-<li>异地双主双备互相同步， 每条 sql 本身会执行一次</li>
-<li>由于业务需要，通过 dbasync 将某数据通过 mysql client 导入数据库</li>
-<li>因此出现了4个问题<br>3.1 由于 sql dbasync与 mysql 本身数据同步执行的顺序与业务本身的要求不同，可能导致业务数据错误<br>3.2 由于 sql dbasync与 mysql 本身数据同步执行的顺序, 会导致数据与主键不一致。<br>3.3 假如数据中又包含唯一键，则有可能导致两边数据库同步失败<br>3.4 所有的 sql 都会执行2次，导致db性能瓶颈。<br>解决方案:<br>dbasync的 mysql 操作要么单边， 要么完全不能要。</li>
-</ol>
-]]></content>
+    <content type="html"><![CDATA[<h1 id="什么是异地多单元多主架构？"><a href="#什么是异地多单元多主架构？" class="headerlink" title="什么是异地多单元多主架构？"></a>什么是异地多单元多主架构？</h1><h1 id="异地机房的容灾方案发展历史"><a href="#异地机房的容灾方案发展历史" class="headerlink" title="异地机房的容灾方案发展历史"></a>异地机房的容灾方案发展历史</h1><h1 id="各种方案的实现与痛点"><a href="#各种方案的实现与痛点" class="headerlink" title="各种方案的实现与痛点"></a>各种方案的实现与痛点</h1>]]></content>
     
     <summary type="html">
     
@@ -251,6 +286,71 @@
     
     
       <category term="aliyun oss" scheme="http://yii2cms.com/tags/aliyun-oss/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>redis-memory-analyze</title>
+    <link href="http://yii2cms.com/2017/07/30/skills/redis/redis-memory-analyze/"/>
+    <id>http://yii2cms.com/2017/07/30/skills/redis/redis-memory-analyze/</id>
+    <published>2017-07-30T15:52:42.000Z</published>
+    <updated>2017-11-02T05:09:21.843Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>author AbosFreeman (Oct 25, 2017 19:37)</p>
+</blockquote>
+<h1 id="如何分析redis-内存占用情况"><a href="#如何分析redis-内存占用情况" class="headerlink" title="如何分析redis 内存占用情况"></a>如何分析redis 内存占用情况</h1><h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><ul>
+<li><a href="#效果图">效果图</a></li>
+<li><a href="#资源">资源</a></li>
+<li><a href="#流程">流程</a></li>
+<li><a href="#注意事项">注意事项</a></li>
+<li><a href="#开发技巧">开发技巧</a></li>
+<li><a href="#环境要求">环境要求</a></li>
+<li>(@todo)最后, docker 教程</li>
+<li>(@todo)最后2, 自动导出 excel 与制图</li>
+<li><a href="#相关文章">相关文章</a></li>
+</ul>
+<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><ul>
+<li><p><a href="https://github.com/sripathikrishnan/redis-rdb-tools" target="_blank" rel="external">redis-rdb-tools</a></p>
+</li>
+<li><p><a href="http://github.com/abos5/blog/tree/master/redis/analyze-memory/demo/scripts" target="_blank" rel="external">scripts</a></p>
+</li>
+</ul>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><ul>
+<li>内部数据不外放</li>
+</ul>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 拉取 rdb 二进制文件(rdb文件既redis的db文件)</span></div><div class="line">/path/to/redis-cli -c -h <span class="variable">$&#123;ip&#125;</span> -p <span class="variable">$&#123;port&#125;</span> --rdb <span class="variable">$&#123;d&#125;</span>.<span class="variable">$&#123;ip&#125;</span>.<span class="variable">$&#123;port&#125;</span>.rdb</div><div class="line"></div><div class="line"><span class="comment"># 解析 rdb 文件为文本，格式内容为</span></div><div class="line"><span class="comment"># database,type,key,size_in_bytes,encoding,num_elements,len_largest_element</span></div><div class="line">/path/to/rdb -c memory  <span class="variable">$&#123;rdbfile&#125;</span> &gt; <span class="variable">$&#123;redkfile&#125;</span></div><div class="line"></div><div class="line"><span class="comment"># awk 统计key的内存分布 (需要预先配置前缀与描述，如果没有统计到的会打印出来)</span></div><div class="line"><span class="comment"># 刚开始分析一个 新的集群 的内存分布或者集群 新增key前缀类型 时都需要更新stat文件里的indice变量</span></div><div class="line">./scripts/detail.stat.sh <span class="variable">$&#123;redkfile&#125;</span> &gt; <span class="variable">$&#123;statfile&#125;</span></div></pre></td></tr></table></figure>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li>不要对 master 节点执行 –rdb 操作(在脚本里已经做了过滤，如果的话目前只会写日志到errorlog里)</li>
+</ul>
+<h2 id="开发技巧"><a href="#开发技巧" class="headerlink" title="开发技巧"></a>开发技巧</h2><ul>
+<li>不对 redis 集群使用队列</li>
+<li>不对 redis 集群使用接近常量的 redis key (实在不行可自建shard, 一份数据保存在多个key里,读时使用随机的key)</li>
+<li>支持 php5.3 版本的 phpredis 有bug, 当节点出问题后脚本会死循环导致节点产生大量 MOVED 异常</li>
+<li>尽量避免对集群使用大size的 hash, set, zset</li>
+<li>list 类型基本不使用</li>
+</ul>
+<h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><ul>
+<li>安装基于 python <a href="https://github.com/sripathikrishnan/redis-rdb-tools" target="_blank" rel="external">rdb-tools</a></li>
+<li>redis-cli (3.2.9) 最低版本不了解， 但需要支持 –rdb 操作</li>
+<li>一开始需要一步步整理redis key前缀</li>
+</ul>
+<h2 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h2><ul>
+<li><code>redis集群 内存分布设计之槽点迁移</code></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;author AbosFreeman (Oct 25, 2017 19:37)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;如何分析redis-内存占用情况&quot;&gt;&lt;a href=&quot;#如何分析redis-内存占用情况&quot; class=&quot;heade
+    
+    </summary>
+    
+    
+      <category term="redis cluster" scheme="http://yii2cms.com/tags/redis-cluster/"/>
     
   </entry>
   
