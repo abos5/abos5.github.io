@@ -62,6 +62,27 @@
   </entry>
   
   <entry>
+    <title>docker readme (入门大全)</title>
+    <link href="http://yii2cms.com/2017/08/13/skills/docker/readme/"/>
+    <id>http://yii2cms.com/2017/08/13/skills/docker/readme/</id>
+    <published>2017-08-13T09:25:42.000Z</published>
+    <updated>2017-10-30T15:15:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.gitbook.com/download/epub/book/yeasy/docker_practice" target="_blank" rel="external">入门书籍</a><br><a href="https://cr.console.aliyun.com/#/accelerator" target="_blank" rel="external">阿里云</a><br><a href="https://yq.aliyun.com/articles/110806" target="_blank" rel="external">安装</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.gitbook.com/download/epub/book/yeasy/docker_practice&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;入门书籍&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://cr
+    
+    </summary>
+    
+    
+      <category term="nodejs eggjs" scheme="http://yii2cms.com/tags/nodejs-eggjs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>eggjs tutorial</title>
     <link href="http://yii2cms.com/2017/08/13/skills/nodejs/eggjs-tutorial/"/>
     <id>http://yii2cms.com/2017/08/13/skills/nodejs/eggjs-tutorial/</id>
@@ -96,27 +117,6 @@
     
       &lt;h1 id=&quot;eggjs-的插件&quot;&gt;&lt;a href=&quot;#eggjs-的插件&quot; class=&quot;headerlink&quot; title=&quot;eggjs 的插件&quot;&gt;&lt;/a&gt;eggjs 的插件&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;插件总结起来，其实是加载插件后，执行一段逻辑。&lt;br&gt;至于插件里是
-    
-    </summary>
-    
-    
-      <category term="nodejs eggjs" scheme="http://yii2cms.com/tags/nodejs-eggjs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker readme (入门大全)</title>
-    <link href="http://yii2cms.com/2017/08/13/skills/docker/readme/"/>
-    <id>http://yii2cms.com/2017/08/13/skills/docker/readme/</id>
-    <published>2017-08-13T09:25:42.000Z</published>
-    <updated>2017-10-30T15:15:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.gitbook.com/download/epub/book/yeasy/docker_practice" target="_blank" rel="external">入门书籍</a><br><a href="https://cr.console.aliyun.com/#/accelerator" target="_blank" rel="external">阿里云</a><br><a href="https://yq.aliyun.com/articles/110806" target="_blank" rel="external">安装</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://www.gitbook.com/download/epub/book/yeasy/docker_practice&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;入门书籍&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://cr
     
     </summary>
     
@@ -183,6 +183,26 @@
   
   <entry>
     <title>multiple-server-unit-solution (异地多单元多主架构方案)</title>
+    <link href="http://yii2cms.com/2017/08/01/skills/distribute/multiple-server-unit-solution/"/>
+    <id>http://yii2cms.com/2017/08/01/skills/distribute/multiple-server-unit-solution/</id>
+    <published>2017-08-01T12:48:29.000Z</published>
+    <updated>2017-08-06T15:20:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="什么是异地多单元多主架构？"><a href="#什么是异地多单元多主架构？" class="headerlink" title="什么是异地多单元多主架构？"></a>什么是异地多单元多主架构？</h1><h1 id="异地机房的容灾方案发展历史"><a href="#异地机房的容灾方案发展历史" class="headerlink" title="异地机房的容灾方案发展历史"></a>异地机房的容灾方案发展历史</h1><h1 id="各种方案的实现与痛点"><a href="#各种方案的实现与痛点" class="headerlink" title="各种方案的实现与痛点"></a>各种方案的实现与痛点</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;什么是异地多单元多主架构？&quot;&gt;&lt;a href=&quot;#什么是异地多单元多主架构？&quot; class=&quot;headerlink&quot; title=&quot;什么是异地多单元多主架构？&quot;&gt;&lt;/a&gt;什么是异地多单元多主架构？&lt;/h1&gt;&lt;h1 id=&quot;异地机房的容灾方案发展历史&quot;&gt;&lt;a hre
+    
+    </summary>
+    
+    
+      <category term="distributed-server-side-system" scheme="http://yii2cms.com/tags/distributed-server-side-system/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>multiple-server-unit-solution (异地多单元多主架构方案)</title>
     <link href="http://yii2cms.com/2017/08/01/skills/distribute/mysql-optimize/"/>
     <id>http://yii2cms.com/2017/08/01/skills/distribute/mysql-optimize/</id>
     <published>2017-08-01T12:48:29.000Z</published>
@@ -203,89 +223,6 @@
     
     
       <category term="distributed-server-side-system" scheme="http://yii2cms.com/tags/distributed-server-side-system/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>multiple-server-unit-solution (异地多单元多主架构方案)</title>
-    <link href="http://yii2cms.com/2017/08/01/skills/distribute/multiple-server-unit-solution/"/>
-    <id>http://yii2cms.com/2017/08/01/skills/distribute/multiple-server-unit-solution/</id>
-    <published>2017-08-01T12:48:29.000Z</published>
-    <updated>2017-08-06T15:20:35.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="什么是异地多单元多主架构？"><a href="#什么是异地多单元多主架构？" class="headerlink" title="什么是异地多单元多主架构？"></a>什么是异地多单元多主架构？</h1><h1 id="异地机房的容灾方案发展历史"><a href="#异地机房的容灾方案发展历史" class="headerlink" title="异地机房的容灾方案发展历史"></a>异地机房的容灾方案发展历史</h1><h1 id="各种方案的实现与痛点"><a href="#各种方案的实现与痛点" class="headerlink" title="各种方案的实现与痛点"></a>各种方案的实现与痛点</h1>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;什么是异地多单元多主架构？&quot;&gt;&lt;a href=&quot;#什么是异地多单元多主架构？&quot; class=&quot;headerlink&quot; title=&quot;什么是异地多单元多主架构？&quot;&gt;&lt;/a&gt;什么是异地多单元多主架构？&lt;/h1&gt;&lt;h1 id=&quot;异地机房的容灾方案发展历史&quot;&gt;&lt;a hre
-    
-    </summary>
-    
-    
-      <category term="distributed-server-side-system" scheme="http://yii2cms.com/tags/distributed-server-side-system/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>redis-cluster-debug-log about</title>
-    <link href="http://yii2cms.com/2017/07/30/skills/redis/redis-cluster-debug-log-of-crash/"/>
-    <id>http://yii2cms.com/2017/07/30/skills/redis/redis-cluster-debug-log-of-crash/</id>
-    <published>2017-07-30T15:52:42.000Z</published>
-    <updated>2017-08-02T15:43:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="背景-background"><a href="#背景-background" class="headerlink" title="背景(background)"></a>背景(background)</h3><ol>
-<li>公司： xxx</li>
-<li>业务: 评论</li>
-<li>问题:</li>
-<li>备注: 刚到公司一个多月的我，在没有任何人指导、讲解任何业务的情况下努力争取熟悉业务、努力融入到业务同事的社交环境去。</li>
-</ol>
-<h3 id="问题详情"><a href="#问题详情" class="headerlink" title="问题详情"></a>问题详情</h3><p>怎样讲好一个故事。</p>
-<p>redis 集群节点释放内存也是很坑</p>
-<h3 id="问题总结"><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h3><ol>
-<li>Redis 机器不要与业务机器放到一起， 否则CPU之间会互相影响</li>
-<li>Redis 集群的内存配置要规划好，同一机器上的 redis集群内存总和不要大于机器内存</li>
-<li>高并发业务不能写上一个固定的key，否则会对一个节点进行大量查询， 相当于原本发放到x个节点的压力集中到1个节点去了，失去了集群的意义</li>
-<li>守护进程脚本请求数据时要有sleep， 不能持续请求mysql, redis等服务， 否则会造成大量压力</li>
-<li>守护进程必须设置在一段时间后自行退出，不能跑太久， 否则会出现服务异常导致奇异bug。</li>
-<li>主从节点不能防在同一台。</li>
-<li>当某节点出现qps、cpu表现比其他更高、有异常的时候则可以考虑用strace对那个server进行监控，看看是哪些命令常驻， 大部分时候是一些没有分布式特性的key(strace -p 54235 -e read -s 1024 -o 54235.strace.log 这个命令拯救世界)</li>
-<li>当一个url请求里，redis请求可能获取不到数据、且事务性要求不高时，可以在超时、异常时直接断开，返回500， 让其他请求可以顺利进行。(或者不一定每个redis命令失败时都断开， 只需要断开入口处常用的)</li>
-<li>表状态的redis key如果做了过期，会影响代码上判断的分歧， 比如null和0</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;背景-background&quot;&gt;&lt;a href=&quot;#背景-background&quot; class=&quot;headerlink&quot; title=&quot;背景(background)&quot;&gt;&lt;/a&gt;背景(background)&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;公司： xxx&lt;/li&gt;
-&lt;li&gt;业
-    
-    </summary>
-    
-    
-      <category term="redis cluster C10K" scheme="http://yii2cms.com/tags/redis-cluster-C10K/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阿里云服务器 oss 的使用</title>
-    <link href="http://yii2cms.com/2017/07/30/skills/aliyun/oss/"/>
-    <id>http://yii2cms.com/2017/07/30/skills/aliyun/oss/</id>
-    <published>2017-07-30T15:52:42.000Z</published>
-    <updated>2017-07-31T16:28:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>创建一个简单的bucket用来放公网访问的图片资源异常方便<br>不过还是建议用自有域名cname过去比较好， 方便以后迁移</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;创建一个简单的bucket用来放公网访问的图片资源异常方便&lt;br&gt;不过还是建议用自有域名cname过去比较好， 方便以后迁移&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-      <category term="aliyun oss" scheme="http://yii2cms.com/tags/aliyun-oss/"/>
     
   </entry>
   
@@ -351,6 +288,69 @@
     
     
       <category term="redis cluster" scheme="http://yii2cms.com/tags/redis-cluster/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阿里云服务器 oss 的使用</title>
+    <link href="http://yii2cms.com/2017/07/30/skills/aliyun/oss/"/>
+    <id>http://yii2cms.com/2017/07/30/skills/aliyun/oss/</id>
+    <published>2017-07-30T15:52:42.000Z</published>
+    <updated>2017-07-31T16:28:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>创建一个简单的bucket用来放公网访问的图片资源异常方便<br>不过还是建议用自有域名cname过去比较好， 方便以后迁移</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;创建一个简单的bucket用来放公网访问的图片资源异常方便&lt;br&gt;不过还是建议用自有域名cname过去比较好， 方便以后迁移&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="aliyun oss" scheme="http://yii2cms.com/tags/aliyun-oss/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>redis-cluster-debug-log about</title>
+    <link href="http://yii2cms.com/2017/07/30/skills/redis/redis-cluster-debug-log-of-crash/"/>
+    <id>http://yii2cms.com/2017/07/30/skills/redis/redis-cluster-debug-log-of-crash/</id>
+    <published>2017-07-30T15:52:42.000Z</published>
+    <updated>2017-08-02T15:43:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="背景-background"><a href="#背景-background" class="headerlink" title="背景(background)"></a>背景(background)</h3><ol>
+<li>公司： xxx</li>
+<li>业务: 评论</li>
+<li>问题:</li>
+<li>备注: 刚到公司一个多月的我，在没有任何人指导、讲解任何业务的情况下努力争取熟悉业务、努力融入到业务同事的社交环境去。</li>
+</ol>
+<h3 id="问题详情"><a href="#问题详情" class="headerlink" title="问题详情"></a>问题详情</h3><p>怎样讲好一个故事。</p>
+<p>redis 集群节点释放内存也是很坑</p>
+<h3 id="问题总结"><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h3><ol>
+<li>Redis 机器不要与业务机器放到一起， 否则CPU之间会互相影响</li>
+<li>Redis 集群的内存配置要规划好，同一机器上的 redis集群内存总和不要大于机器内存</li>
+<li>高并发业务不能写上一个固定的key，否则会对一个节点进行大量查询， 相当于原本发放到x个节点的压力集中到1个节点去了，失去了集群的意义</li>
+<li>守护进程脚本请求数据时要有sleep， 不能持续请求mysql, redis等服务， 否则会造成大量压力</li>
+<li>守护进程必须设置在一段时间后自行退出，不能跑太久， 否则会出现服务异常导致奇异bug。</li>
+<li>主从节点不能防在同一台。</li>
+<li>当某节点出现qps、cpu表现比其他更高、有异常的时候则可以考虑用strace对那个server进行监控，看看是哪些命令常驻， 大部分时候是一些没有分布式特性的key(strace -p 54235 -e read -s 1024 -o 54235.strace.log 这个命令拯救世界)</li>
+<li>当一个url请求里，redis请求可能获取不到数据、且事务性要求不高时，可以在超时、异常时直接断开，返回500， 让其他请求可以顺利进行。(或者不一定每个redis命令失败时都断开， 只需要断开入口处常用的)</li>
+<li>表状态的redis key如果做了过期，会影响代码上判断的分歧， 比如null和0</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;背景-background&quot;&gt;&lt;a href=&quot;#背景-background&quot; class=&quot;headerlink&quot; title=&quot;背景(background)&quot;&gt;&lt;/a&gt;背景(background)&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;公司： xxx&lt;/li&gt;
+&lt;li&gt;业
+    
+    </summary>
+    
+    
+      <category term="redis cluster C10K" scheme="http://yii2cms.com/tags/redis-cluster-C10K/"/>
     
   </entry>
   
